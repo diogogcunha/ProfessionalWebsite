@@ -65,7 +65,6 @@
                 <a href="/" class="logo">Diogo G. Cunha</a>
                 <div class="nav-links">
                     <a href="#services">How can I help</a>
-                    <a href="#case-studies">Case Studies</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -84,29 +83,38 @@
             </section>
 
             <!-- Service Pillars Overview -->
-            <section id="services" class="services">
+            <section id="services" class="section services">
                 <h2>How can I help?</h2>
                 <div class="services-layout">
                     <div class="services-list" role="tablist" aria-label="Service Categories">
-                        <button id="tab-tech-hubs" class="service-item active" role="tab" aria-selected="true" aria-controls="tech-hubs" tabindex="0" onclick="showService('tech-hubs', this)">
+                        <button id="tab-tech-hubs" class="service-item active" role="tab" aria-selected="true" aria-controls="tech-hubs" tabindex="0">
                             <h3>Tech Hub Creation</h3>
                         </button>
-                        <button id="tab-fractional-cto" class="service-item" role="tab" aria-selected="false" aria-controls="fractional-cto" tabindex="-1" onclick="showService('fractional-cto', this)">
+                        <button id="tab-fractional-cto" class="service-item" role="tab" aria-selected="false" aria-controls="fractional-cto" tabindex="-1">
                             <h3>Fractional CTO</h3>
                         </button>
-                        <button id="tab-mentorship" class="service-item" role="tab" aria-selected="false" aria-controls="mentorship" tabindex="-1" onclick="showService('mentorship', this)">
+                        <button id="tab-mentorship" class="service-item" role="tab" aria-selected="false" aria-controls="mentorship" tabindex="-1">
                             <h3>Mentorship</h3>
                         </button>
                     </div>
                     <div class="service-details">
                         <div id="tech-hubs" class="service-content active" role="tabpanel" aria-labelledby="tab-tech-hubs" tabindex="0">
-                            <h3>Tech Hub Creation</h3>
-                            <p>End-to-end setup and management of high-performing technology hubs in Portugal, from location and operating model design to talent strategy and execution governance.</p>
-                            <ul>
-                                <li>Location Analysis & Setup</li>
-                                <li>Talent Acquisition Strategy</li>
-                                <li>Hub Management & Operations</li>
-                            </ul>
+                            <div class="service-info">
+                                <h3>Tech Hub Creation</h3>
+                                <p class="headline">End-to-end setup and management of high-performing technology hubs in Portugal, from location and operating model design to talent strategy and execution governance.</p>
+                                <h4 class="service-subheading">Buildup</h4>
+                                <ul>
+                                    <li>Location Analysis & Setup Strategy</li>
+                                    <li>Operating Model & Organizational Design</li>
+                                    <li>Core Team Talent Acquisition</li>
+                                </ul>
+                                <h4 class="service-subheading">Scaleup</h4>
+                                <ul>
+                                    <li>Hub Management & Execution Governance</li>
+                                    <li>Engineering Culture & Integration</li>
+                                    <li>Local Leadership Transition</li>
+                                </ul>
+                            </div>
                             <div class="mentorship-faq" aria-label="Tech Hub Creation FAQ">
                                 <h4 class="service-subheading">Frequently Asked Questions</h4>
                                 <details>
@@ -127,25 +135,27 @@
                                 </details>
                                 <details>
                                     <summary>What happens after the hub is established?</summary>
-                                    <p>My goal is to build a self-sustaining organization. Once the hub reaches stable performance, I help transition leadership to a permanent local Site Lead or VP of Engineering, remaining available for strategic advisory if needed.</p>
+                                    <p>The goal is to build a self-sustaining organization. Once the hub reaches stable performance, there's a transition of leadership to a permanent local Site Lead or VP of Engineering, remaining available for strategic advisory if needed.</p>
                                 </details>
                             </div>
                         </div>
                         <div id="fractional-cto" class="service-content" role="tabpanel" aria-labelledby="tab-fractional-cto" tabindex="0" hidden>
-                            <h3>Fractional CTO</h3>
-                            <p>Executive technical leadership on a flexible engagement model, combining operations and strategy to help organizations improve delivery now while building for long-term growth.</p>
-                            <h4 class="service-subheading">Operations</h4>
-                            <ul>
-                                <li>Process Optimization & Automation</li>
-                                <li>AI Tooling Integration in SDLC</li>
-                                <li>Operational Scale Up</li>
-                            </ul>
-                            <h4 class="service-subheading">Strategy</h4>
-                            <ul>
-                                <li>Digital Transformation Strategy</li>
-                                <li>Technology Roadmapping and Milestones Definition</li>
-                                <li>Business Alignment</li>
-                            </ul>
+                            <div class="service-info">
+                                <h3>Fractional CTO</h3>
+                                <p class="headline">Executive technical leadership on a flexible engagement model, combining operations and strategy to help organizations improve delivery now while building for long-term growth.</p>
+                                <h4 class="service-subheading">Operations</h4>
+                                <ul>
+                                    <li>Process Optimization & Automation</li>
+                                    <li>AI Tooling Integration in SDLC</li>
+                                    <li>Operational Scale Up</li>
+                                </ul>
+                                <h4 class="service-subheading">Strategy</h4>
+                                <ul>
+                                    <li>Digital Transformation Strategy</li>
+                                    <li>Technology Roadmapping and Milestones Definition</li>
+                                    <li>Business Alignment</li>
+                                </ul>
+                            </div>
                             <div class="mentorship-faq" aria-label="Fractional CTO FAQ">
                                 <h4 class="service-subheading">Frequently Asked Questions</h4>
                                 <details>
@@ -171,33 +181,32 @@
                             </div>
                         </div>
                         <div id="mentorship" class="service-content" role="tabpanel" aria-labelledby="tab-mentorship" tabindex="0" hidden>
-                            <h3>Engineering Leadership Mentorship</h3>
-                            <p>
-                                A focused mentorship engagement for engineering leaders who need techniques for decision-making, stronger delivery discipline, and clearer leadership execution.
-                            </p>
-                            <h4 class="service-subheading">Format & Cadence</h4>
-                            <ul class="mentorship-list">
-                                <li>Initial goal-setting session to define priorities and success criteria</li>
-                                <li>Weekly or bi-weekly 1:1 sessions, depending on urgency and scope</li>
-                                <li>Practical follow-up actions and accountability between sessions</li>
-                                <li>Typical mentorship cycles run for 6 to 12 weeks</li>
-                            </ul>
-                            <h4 class="service-subheading">What You’ll Get</h4>
-                            <ul class="mentorship-list">
-                                <li>Leadership strategy tailored to your current team and role</li>
-                                <li>Delivery and operational review of your engineering setup</li>
-                                <li>Guidance on roadmap, stakeholder management, and prioritization</li>
-                                <li>Coaching for difficult conversations and team performance challenges</li>
-                                <li>Action plan with concrete next steps between every session</li>
-                            </ul>
-                            <div class="mentorship-cta">
-                                <a class="btn btn-primary" href="mailto:diogogcunha+site@hotmail.com?subject=Mentorship%20Inquiry">Reserve Mentorship Spot</a>
+                            <div class="service-info">
+                                <h3>Engineering Leadership Mentorship</h3>
+                                <p class="headline">
+                                    A focused mentorship engagement for engineering leaders who need techniques for decision-making, stronger delivery discipline, and clearer leadership execution.
+                                </p>
+                                <h4 class="service-subheading">Cycles</h4>
+                                <ul class="mentorship-list">
+                                    <li>Initial goal-setting session to define priorities and success criteria</li>
+                                    <li>Weekly or bi-weekly 1:1 sessions, depending on urgency and scope</li>
+                                    <li>Practical follow-up actions and accountability between sessions</li>
+                                    <li>Typical mentorship cycles run for 6 to 12 weeks</li>
+                                </ul>
+                                <h4 class="service-subheading">Ad-Hoc sessions</h4>
+                                <ul class="mentorship-list">
+                                    <li>Flexible sessions based on immediate needs and challenges</li>
+                                    <li>Quick techniques tailored to your current situation, team, or role</li>
+                                    <li>Guidance and critical thinking on roadmap, stakeholder management, and prioritization</li>
+                                    <li>Coaching for difficult conversations and team performance challenges</li>
+                                    <li>Action plan with concrete next steps to follow-up on</li>
+                                </ul>
                             </div>
                             <div class="mentorship-faq" aria-label="Mentorship FAQ">
                                 <h4 class="service-subheading">Frequently Asked Questions</h4>
                                 <details>
                                     <summary>Who is this mentorship designed for?</summary>
-                                    <p>Engineering Managers, Heads of Engineering, Tech Leads transitioning into management, and technical founders building their first engineering teams.</p>
+                                    <p>Engineering Managers, Heads of Engineering, Tech Leads transitioning into management, and technical founders building their engineering teams.</p>
                                 </details>
                                 <details>
                                     <summary>Is this technical mentoring or leadership coaching?</summary>
@@ -205,30 +214,28 @@
                                 </details>
                                 <details>
                                     <summary>How are the mentorship sessions structured?</summary>
-                                    <p>Sessions are remote-first and highly practical. We start with a goal-setting session, followed by weekly or bi-weekly 1:1s. Every session ends with concrete action items to apply in your day-to-day role.</p>
+                                    <p>Sessions are remote-first and highly practical. 
+                                        For Ad-hoc sessions, we start with a problem contextualization and then go through solution exploration and elimination exercises. Standard session duration is 1 hour but can be extended if possible.
+                                        For Cycle sessions we start with a goal-setting session, followed by weekly or bi-weekly 1:1s. Every session starts with a review and reflection of previous action items and ends with concrete actions to apply in your day-to-day role.</p>
                                 </details>
                                 <details>
-                                    <summary>What is the typical duration of an engagement?</summary>
-                                    <p>Mentorship cycles can run for 6 to 12 weeks. This provides enough time to tackle specific leadership challenges, implement changes, and measure the impact on your team's performance. Payment is structured as a fixed-fee cycle, invoiced in EUR, and paid upfront before the cycle begins.</p>
+                                    <summary>What is the typical duration of a Cycle engagement?</summary>
+                                    <p>Mentorship cycles can run for 4 to 12 weeks. This provides enough time to tackle specific leadership challenges, implement changes, and measure the impact on your team's performance. Payment is structured as a fixed-fee cycle, invoiced in EUR, and paid upfront before the cycle begins.</p>
                                 </details>
                                 <details>
                                     <summary>Do I need to be based in Portugal?</summary>
                                     <p>Not at all. While Portugal is my home base, I work with engineering leaders and distributed teams globally. Sessions are conducted in English or Portuguese.</p>
                                 </details>
+                                <div class="mentorship-cta">
+                                    <a class="btn btn-primary" href="mailto:diogo@gonçalvesdacunha.com?subject=Mentorship%20Inquiry">Reserve Mentorship Spot</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="case-studies" class="case-studies">
-                <h2>Case Studies</h2>
-                <p>
-                    Selected engagements include leadership of engineering organizations with more than 100 professionals, technology hub setup in Portugal, and digital product delivery across banking, fintech, retail, telco, and energy.
-                </p>
-            </section>
-
-            <section id="about" class="about">
+            <section id="about" class="section about">
                 <h2>About</h2>
                 <div class="about-layout">
                     <div class="about-main">
@@ -255,7 +262,7 @@
                 </div>
             </section>
 
-            <section id="contact" class="contact">
+            <section id="contact" class="section contact">
                 <h2>Contact</h2>
                 <div class="contact-layout">
                     <p>
@@ -297,54 +304,49 @@
     </div>
 
     <script>
-        function showService(serviceId, triggerButton) {
+        document.addEventListener('DOMContentLoaded', () => {
             const tabs = document.querySelectorAll('.service-item');
             const panels = document.querySelectorAll('.service-content');
 
-            tabs.forEach((tab) => {
-                tab.classList.remove('active');
-                tab.setAttribute('aria-selected', 'false');
-                tab.setAttribute('tabindex', '-1');
-            });
+            function activateTab(tab) {
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                    t.setAttribute('tabindex', '-1');
+                });
+                panels.forEach(p => {
+                    p.classList.remove('active');
+                    p.setAttribute('hidden', 'hidden');
+                });
 
-            panels.forEach((panel) => {
-                panel.classList.remove('active');
-                panel.setAttribute('hidden', 'hidden');
-            });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                tab.setAttribute('tabindex', '0');
 
-            triggerButton.classList.add('active');
-            triggerButton.setAttribute('aria-selected', 'true');
-            triggerButton.setAttribute('tabindex', '0');
-
-            const activePanel = document.getElementById(serviceId);
-            activePanel.classList.add('active');
-            activePanel.removeAttribute('hidden');
-        }
-
-        document.querySelectorAll('.service-item').forEach((tab, index, tabs) => {
-            tab.addEventListener('keydown', (event) => {
-                if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp' && event.key !== 'Home' && event.key !== 'End') {
-                    return;
+                const targetId = tab.getAttribute('aria-controls');
+                const activePanel = document.getElementById(targetId);
+                if (activePanel) {
+                    activePanel.classList.add('active');
+                    activePanel.removeAttribute('hidden');
                 }
+            }
 
-                event.preventDefault();
-
-                let nextIndex = index;
-                if (event.key === 'ArrowDown') {
-                    nextIndex = (index + 1) % tabs.length;
-                }
-                if (event.key === 'ArrowUp') {
-                    nextIndex = (index - 1 + tabs.length) % tabs.length;
-                }
-                if (event.key === 'Home') {
-                    nextIndex = 0;
-                }
-                if (event.key === 'End') {
-                    nextIndex = tabs.length - 1;
-                }
-
-                tabs[nextIndex].focus();
-                tabs[nextIndex].click();
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => activateTab(tab));
+                
+                tab.addEventListener('keydown', (event) => {
+                    if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+                    event.preventDefault();
+                    
+                    let nextIndex = index;
+                    if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+                    if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+                    if (event.key === 'Home') nextIndex = 0;
+                    if (event.key === 'End') nextIndex = tabs.length - 1;
+                    
+                    tabs[nextIndex].focus();
+                    activateTab(tabs[nextIndex]);
+                });
             });
         });
     </script>
