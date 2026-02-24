@@ -1,0 +1,9 @@
+ErrorDocument 404 /404.html
+
+<Files "case-study-template.html">
+    Require all denied
+</Files>
+
+<Files "CASE_STUDY_INSTRUCTIONS.md">
+    Require all denied
+</Files>

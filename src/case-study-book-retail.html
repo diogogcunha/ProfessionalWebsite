@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling a National Book Retail SaaS | Diogo G. Cunha</title>
+    <meta name="description" content="Case study: Transforming a legacy codebase into a multi-tenant SaaS platform supporting 200+ bookstores and managing 80M+ stock instances.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=20260223">
+    <script src="theme.js?v=20260224" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav aria-label="Primary Navigation">
+                <a href="/" class="logo">Diogo G. Cunha</a>
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="/#services">How can I help</a>
+                        <a href="/#case-studies">Cases</a>
+                        <a href="/#about">About</a>
+                        <a href="/#contact">Contact</a>
+                    </div>
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+                        <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <div class="case-study-header">
+                <h1>Scaling a National Book Retail SaaS</h1>
+                <div class="case-study-meta">
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Market</span>
+                        <span>Book Retail (Netherlands)</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Scale</span>
+                        <span>200+ Bookstores, 80M+ Stock Instances</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Role</span>
+                        <span>Architecture Lead & Migration Program Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80" alt="Library interior representing book retail" class="case-study-hero-img">
+
+            <div class="case-study-content">
+                <h2>The Challenge</h2>
+                <p>
+                    Without a unified platform, independent bookstores risked losing customer loyalty and market share to larger e-commerce players that could deliver faster and provide a better digital experience. The Dutch book retail market is highly regulated, with fixed book price laws meaning that bookstores cannot compete on price. Instead, they must differentiate entirely on customer experience, curation, and delivery speed.
+                </p>
+                <p>
+                    A coalition of independent bookstores was struggling with fragmented, legacy e-commerce systems (often heavily customized, aging platforms). These systems suffered from poor performance, lacked real-time inventory syncing with physical stores, and struggled to integrate deeply with the national centralized distribution monopoly. Over an 18-month transformation, the goal was to transition these disparate systems into a unified, multi-tenant SaaS platform without disrupting daily operations.
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I personally led the platform architecture, migration strategy, and distributor integration design. I worked hands-on with engineering leads on API contracts and event flows, set migration sequencing with product and operations stakeholders, and chaired cutover readiness checkpoints.
+                </p>
+                <p>
+                    In practical terms, I owned the architecture decisions and migration plan, while delivery squads implemented service components and storefront features. I also aligned technical priorities with business constraints so onboarding could continue while legacy risk was reduced sprint by sprint.
+                </p>
+
+                <h2>Timeline at a Glance</h2>
+                <ul>
+                    <li><strong>First 90 days:</strong> Stabilized critical integration risks, defined target architecture, and launched migration sequencing.</li>
+                    <li><strong>Months 4–12:</strong> Rolled out multi-tenant services and real-time POS sync while onboarding stores in controlled waves.</li>
+                    <li><strong>Months 13–18:</strong> Completed final legacy cutovers and distributor automation with zero business downtime.</li>
+                </ul>
+
+                <h2>The Solution</h2>
+                <p>
+                    Over 18 months, we architected and delivered a modern, API-first SaaS platform tailored specifically for the nuances of the European book market.
+                </p>
+                <h3>1. Multi-Tenant Headless Architecture</h3>
+                <p>
+                    To support over 200 independent bookstores while maintaining their unique brand identities, we implemented a headless commerce approach. A robust backend API served customizable frontend templates, ensuring strict data isolation between tenants while allowing a single shared codebase for rapid feature deployment.
+                </p>
+                <h3>2. Real-Time Omnichannel Syncing</h3>
+                <p>
+                    Overselling was a critical issue when physical and digital storefronts were out of sync. We introduced an event-driven architecture to synchronize Point of Sale (POS) inventory with the online storefronts in milliseconds, managing over 80 million physical and digital stock instances reliably.
+                </p>
+                <h3>3. Deep Distributor Integration</h3>
+                <p>
+                    We built automated, real-time API integrations with the national centralized distributor. This enabled seamless dropshipping, real-time bibliographic data updates (ONIX feeds), and automated digital fulfillment for eBooks and audiobooks using Social DRM (watermarking).
+                </p>
+                <h3>4. Zero-Downtime Migration</h3>
+                <p>
+                    Using the Strangler Fig pattern, we gradually migrated functionality from the legacy systems to the new microservices. Automated ETL pipelines ensured historical orders, customer accounts, and loyalty points were safely transferred before the final cutover, resulting in zero business disruption.
+                </p>
+
+                <h2>The Outcome</h2>
+                <ul>
+                    <li><strong>Massive Scale:</strong> Successfully onboarded and supported 200+ independent bookstores on a single, highly available platform.</li>
+                    <li><strong>Operational Efficiency:</strong> Managed 80 million+ stock instances with real-time accuracy, eliminating overselling issues.</li>
+                    <li><strong>Competitive Advantage:</strong> Empowered small, independent retailers to compete with massive e-commerce giants on user experience, curation, and fulfillment speed.</li>
+                    <li><strong>Future-Proofing:</strong> Replaced fragile legacy code with a scalable, maintainable SaaS architecture capable of rapid iteration, with full migration completed in 18 months.</li>
+                </ul>
+
+                <h2>Stakeholder Perspective</h2>
+                <blockquote>
+                    “For the first time, our stores could trust online inventory in real time. We stopped losing sales to stock mismatches and finally had a platform that could scale with us.” — Retail Operations Director (anonymized)
+                </blockquote>
+            </div>
+
+            <section class="case-study-cta-panel" aria-label="Discuss your challenge">
+                <h2>Facing a similar challenge?</h2>
+                <p>Let's discuss your goals and the fastest path to practical results.</p>
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="mailto:diogo@goncalvesdacunha.com?subject=Case%20Study%20Follow-up&body=Hello%20Diogo%2C%0D%0A%0D%0AI%20read%20your%20case%20study%20and%20would%20like%20to%20discuss%20a%20similar%20challenge.%0D%0A%0D%0ACompany%3A%20%0D%0ARole%3A%20%0D%0AChallenge%3A%20%0D%0A%0D%0AThank%20you.">Let's discuss your challenge</a>
+                    <a class="btn btn-secondary" href="/#contact">More contact options</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p class="footer-brand">&copy; 2026 Diogo G. Cunha.</p>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#case-studies">Case Studies</a>
+                    <a href="/#about">About</a>
+                    <a href="/#contact">Contact</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                </nav>
+                <p class="footer-registration">Registered independent consultancy in Portugal. Tax registration details available on request.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

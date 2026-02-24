@@ -8,18 +8,25 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="styles.css?v=20260223">
+    <script src="theme.js?v=20260224" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
             <nav aria-label="Primary Navigation">
                 <a href="/" class="logo">Diogo G. Cunha</a>
-                <div class="nav-links">
-                    <a href="/#services">How can I help</a>
-                    <a href="/#case-studies">Cases</a>
-                    <a href="/#about">About</a>
-                    <a href="/#contact">Contact</a>
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="/#services">How can I help</a>
+                        <a href="/#case-studies">Cases</a>
+                        <a href="/#about">About</a>
+                        <a href="/#contact">Contact</a>
+                    </div>
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+                        <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -48,15 +55,20 @@
             <div class="case-study-content">
                 <h2>The Challenge</h2>
                 <p>
-                    A global product organization needed to expand delivery capacity by establishing a dedicated engineering hub in Portugal. The objective was clear: reduce operating costs while maintaining high quality and improving delivery speed.
+                    Without a successful hub launch, the organization risked rising delivery costs, slower roadmap execution, and growing dependency on an already stretched headquarters team. A global product organization needed to expand delivery capacity by establishing a dedicated engineering hub in Portugal. The objective was clear: reduce operating costs while maintaining high quality and improving delivery speed.
                 </p>
                 <p>
-                    The challenge was to stand up a new team quickly, align it with headquarters standards, and avoid the common friction of distributed execution. The hub had to be effective early and sustainable long term.
+                    In the first 6 months, the challenge was to stand up a new team quickly, align it with headquarters standards, and avoid the common friction of distributed execution. The hub had to be effective early and sustainable long term.
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I personally led the hub setup end to end: hiring strategy, interview calibration, onboarding model, and delivery governance. I managed stakeholder alignment between Portugal and HQ, established the remote operating cadence, and coached team leads while the engineering team drove implementation and release execution.
                 </p>
 
                 <h2>The Solution</h2>
                 <p>
-                    I led the hub setup end to end, from hiring and team design to operating model and client-facing execution.
+                    Over a 5-year operating period, I led the hub setup end to end, from hiring and team design to operating model and client-facing execution.
                 </p>
                 <h3>1. Lean Team, Clear Structure</h3>
                 <p>
@@ -78,11 +90,36 @@
                     <li><strong>Improved Delivery Throughput:</strong> Deployment rhythm and delivery consistency improved through a stable Agile cadence and direct communication loops.</li>
                     <li><strong>Sustained Performance:</strong> The hub operated successfully for 5 years in a fully remote model with continued culture and execution alignment.</li>
                 </ul>
+
+                <h2>Stakeholder Perspective</h2>
+                <blockquote>
+                    “The Portugal hub became productive much faster than expected and never felt like an offshore handoff. It worked as one integrated engineering unit.” — Product Executive (anonymized)
+                </blockquote>
             </div>
+
+            <section class="case-study-cta-panel" aria-label="Discuss your challenge">
+                <h2>Facing a similar challenge?</h2>
+                <p>Let's discuss your goals and the fastest path to practical results.</p>
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="mailto:diogo@goncalvesdacunha.com?subject=Case%20Study%20Follow-up&body=Hello%20Diogo%2C%0D%0A%0D%0AI%20read%20your%20case%20study%20and%20would%20like%20to%20discuss%20a%20similar%20challenge.%0D%0A%0D%0ACompany%3A%20%0D%0ARole%3A%20%0D%0AChallenge%3A%20%0D%0A%0D%0AThank%20you.">Let's discuss your challenge</a>
+                    <a class="btn btn-secondary" href="/#contact">More contact options</a>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 Diogo G. Cunha.</p>
+            <div class="footer-content">
+                <p class="footer-brand">&copy; 2026 Diogo G. Cunha.</p>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#case-studies">Case Studies</a>
+                    <a href="/#about">About</a>
+                    <a href="/#contact">Contact</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                </nav>
+                <p class="footer-registration">Registered independent consultancy in Portugal. Tax registration details available on request.</p>
+            </div>
         </footer>
     </div>
 </body>

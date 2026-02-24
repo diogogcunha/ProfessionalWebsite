@@ -8,18 +8,25 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="styles.css?v=20260223">
+    <script src="theme.js?v=20260224" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
             <nav aria-label="Primary Navigation">
                 <a href="/" class="logo">Diogo G. Cunha</a>
-                <div class="nav-links">
-                    <a href="/#services">How can I help</a>
-                    <a href="/#case-studies">Cases</a>
-                    <a href="/#about">About</a>
-                    <a href="/#contact">Contact</a>
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="/#services">How can I help</a>
+                        <a href="/#case-studies">Cases</a>
+                        <a href="/#about">About</a>
+                        <a href="/#contact">Contact</a>
+                    </div>
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+                        <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -48,15 +55,20 @@
             <div class="case-study-content">
                 <h2>The Challenge</h2>
                 <p>
-                    An already operating company had a growing engineering team, but no formal service model, limited internal accountability structures, and increasing pressure to deliver consistently across multiple industries.
+                    Without a structured operating model, the company risked margin erosion, leadership bottlenecks, and inconsistent delivery quality for global clients. An already operating company had a growing engineering team, but no formal service model, limited internal accountability structures, and increasing pressure to deliver consistently across multiple industries.
                 </p>
                 <p>
-                    The organization needed to evolve from a single-team setup into a full engineering department capable of scaling sustainably, promoting internal leadership, and maintaining strong financial performance while delivering high-quality outcomes globally.
+                    Over an 18-month transformation, the organization needed to evolve from a single-team setup into a full engineering department capable of scaling sustainably, promoting internal leadership, and maintaining strong financial performance while delivering high-quality outcomes globally.
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I personally led the department redesign, defined service boundaries, and set management operating cadences tied to business KPIs. I coached new engineering managers, ran performance and delivery reviews, and partnered with commercial leadership on margin discipline while teams executed delivery across the five services.
                 </p>
 
                 <h2>The Solution</h2>
                 <p>
-                    I led a department-wide transformation focused on organization design, leadership development, and service clarity.
+                    Over 18 months, I led a department-wide transformation focused on organization design, leadership development, and service clarity.
                 </p>
                 <h3>1. Service-Based Operating Model</h3>
                 <p>
@@ -75,14 +87,39 @@
                 <ul>
                     <li><strong>Team Scale:</strong> Expanded the engineering organization from 25 to 100+ professionals.</li>
                     <li><strong>Operating Clarity:</strong> Established 5 formal engineering services with clear accountability and internal structure.</li>
-                    <li><strong>Financial Growth:</strong> Increased profit margin from €150K to €750K while scaling capacity.</li>
+                    <li><strong>Financial Growth:</strong> Increased profit margin from €150K to €750K while scaling capacity over 18 months.</li>
                     <li><strong>Delivery Quality:</strong> Maintained high delivery standards for global clients in regulated and high-demand sectors.</li>
                 </ul>
+
+                <h2>Stakeholder Perspective</h2>
+                <blockquote>
+                    “The service model gave us real accountability and predictability. We could scale delivery and still improve margin, instead of trading one for the other.” — Managing Director (anonymized)
+                </blockquote>
             </div>
+
+            <section class="case-study-cta-panel" aria-label="Discuss your challenge">
+                <h2>Facing a similar challenge?</h2>
+                <p>Let's discuss your goals and the fastest path to practical results.</p>
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="mailto:diogo@goncalvesdacunha.com?subject=Case%20Study%20Follow-up&body=Hello%20Diogo%2C%0D%0A%0D%0AI%20read%20your%20case%20study%20and%20would%20like%20to%20discuss%20a%20similar%20challenge.%0D%0A%0D%0ACompany%3A%20%0D%0ARole%3A%20%0D%0AChallenge%3A%20%0D%0A%0D%0AThank%20you.">Let's discuss your challenge</a>
+                    <a class="btn btn-secondary" href="/#contact">More contact options</a>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 Diogo G. Cunha.</p>
+            <div class="footer-content">
+                <p class="footer-brand">&copy; 2026 Diogo G. Cunha.</p>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#case-studies">Case Studies</a>
+                    <a href="/#about">About</a>
+                    <a href="/#contact">Contact</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                </nav>
+                <p class="footer-registration">Registered independent consultancy in Portugal. Tax registration details available on request.</p>
+            </div>
         </footer>
     </div>
 </body>

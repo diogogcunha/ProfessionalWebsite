@@ -8,18 +8,25 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="styles.css?v=20260223">
+    <script src="theme.js?v=20260224" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
             <nav aria-label="Primary Navigation">
                 <a href="/" class="logo">Diogo G. Cunha</a>
-                <div class="nav-links">
-                    <a href="/#services">How can I help</a>
-                    <a href="/#case-studies">Cases</a>
-                    <a href="/#about">About</a>
-                    <a href="/#contact">Contact</a>
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="/#services">How can I help</a>
+                        <a href="/#case-studies">Cases</a>
+                        <a href="/#about">About</a>
+                        <a href="/#contact">Contact</a>
+                    </div>
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+                        <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -48,15 +55,20 @@
             <div class="case-study-content">
                 <h2>The Challenge</h2>
                 <p>
-                    A fast-growing engineering organization expanded from 25 to 100+ people without a formal career framework, clear progression paths, or a structured feedback cycle. Managers and individual contributors lacked a consistent language for expectations, growth, and performance.
+                    Without a structured people system, the company risked avoidable attrition, inconsistent performance decisions, and weaker leadership credibility during rapid growth. A fast-growing engineering organization expanded from 25 to 100+ people without a formal career framework, clear progression paths, or a structured feedback cycle. Managers and individual contributors lacked a consistent language for expectations, growth, and performance.
                 </p>
                 <p>
-                    The leadership team needed a scalable people system that would improve retention, create stronger manager-IC communication, and keep growth sustainable without introducing bureaucratic friction.
+                    In the first 90 days, the leadership team needed a scalable people system that would improve retention, create stronger manager-IC communication, and keep growth sustainable without introducing bureaucratic friction.
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I personally designed the career framework, feedback model, and rollout plan with engineering leadership and HR partners. I facilitated calibration sessions, wrote the first versions of level expectations, trained managers on feedback conversations, and iterated the system over two years while the broader leadership team executed it day to day.
                 </p>
 
                 <h2>The Solution</h2>
                 <p>
-                    I led the design and rollout of a full people operating model covering mentorship, feedback, and performance management.
+                    Over a two-year implementation, I led the design and rollout of a full people operating model covering mentorship, feedback, and performance management.
                 </p>
                 <h3>1. Mentorship Network Beyond Org Structure</h3>
                 <p>
@@ -76,13 +88,38 @@
                     <li><strong>Retention Improvement:</strong> Employee turnover remained as low as 7% during high-growth phases.</li>
                     <li><strong>Stronger Leadership Signal:</strong> Offboarding evaluations reported very high satisfaction with team and leadership quality.</li>
                     <li><strong>Faster Issue Discovery:</strong> Managers gained earlier visibility into developer-community challenges through recurring feedback channels.</li>
-                    <li><strong>Sustainable Scale:</strong> The organization grew past 100 engineers with a clear, transparent, and repeatable performance and career system.</li>
+                    <li><strong>Sustainable Scale:</strong> The organization grew past 100 engineers with a clear, transparent, and repeatable performance and career system over two years.</li>
                 </ul>
+
+                <h2>Stakeholder Perspective</h2>
+                <blockquote>
+                    “Before this framework, growth conversations were inconsistent. Now managers and engineers share the same language, and expectations feel fair and actionable.” — VP Engineering (anonymized)
+                </blockquote>
             </div>
+
+            <section class="case-study-cta-panel" aria-label="Discuss your challenge">
+                <h2>Facing a similar challenge?</h2>
+                <p>Let's discuss your goals and the fastest path to practical results.</p>
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="mailto:diogo@goncalvesdacunha.com?subject=Case%20Study%20Follow-up&body=Hello%20Diogo%2C%0D%0A%0D%0AI%20read%20your%20case%20study%20and%20would%20like%20to%20discuss%20a%20similar%20challenge.%0D%0A%0D%0ACompany%3A%20%0D%0ARole%3A%20%0D%0AChallenge%3A%20%0D%0A%0D%0AThank%20you.">Let's discuss your challenge</a>
+                    <a class="btn btn-secondary" href="/#contact">More contact options</a>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 Diogo G. Cunha.</p>
+            <div class="footer-content">
+                <p class="footer-brand">&copy; 2026 Diogo G. Cunha.</p>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <a href="/">Home</a>
+                    <a href="/#services">Services</a>
+                    <a href="/#case-studies">Case Studies</a>
+                    <a href="/#about">About</a>
+                    <a href="/#contact">Contact</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                </nav>
+                <p class="footer-registration">Registered independent consultancy in Portugal. Tax registration details available on request.</p>
+            </div>
         </footer>
     </div>
 </body>
