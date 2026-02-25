@@ -1077,7 +1077,7 @@ nav {
 
     .case-study-cta-panel {
         max-width: 800px;
-        margin: 3rem auto 0;
+        margin: 3rem auto 3rem;
         padding: 2rem;
         background-color: var(--bg-secondary);
         border: 1px solid var(--border-color);

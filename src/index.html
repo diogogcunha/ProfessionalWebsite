@@ -1,6 +1,32 @@
 <!DOCTYPE html>
+<!--
+  👋 Hello there, fellow developer! 🕵️‍♂️✨
+
+  I see you inspecting the code! I thought about you and wanted to leave a little note about how this site was built. 
+
+  Here's the tech recipe for this webpage:
+  🛠️ Stack: Kept it old-school and clean with Vanilla HTML, CSS, and JavaScript, and local python server. No heavy frameworks here!
+  🤖 Tools: Built using GitHub Copilot on VSCode and the CLI.
+  🧠 Models: Powered by an ensemble of AI models including Gemini 3.1, GPT5.2 Codex, Claude Sonnet 4.6, Claude Opus 4.6, and Raptor mini.
+  🕵️ Agents: I used a multi-agent setup to make sure everything is top-notch:
+     - 💻 A Coding agent for the heavy lifting
+     - 🔒 A Security agent to keep things safe
+     - 🔍 An SEO, AEO, and Accessibility agent to make sure everyone (and every bot) can read it
+     - 👥 A Client Personas Validation agent to ensure it hits the right mark with the audience
+
+  Thanks for stopping by and checking under the hood. Happy coding! 🚀
+-->
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CB6C1S1G32"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CB6C1S1G32');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diogo G. Cunha | Engineering Consultancy in Portugal</title>
@@ -275,7 +301,7 @@
                     <div class="case-studies-grid">
                         <a href="case-study-book-retail.html" class="case-card">
                             <div class="case-thumb">
-                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=600&q=80" alt="Book Retail SaaS Case Study" loading="lazy">
+                                <img src="img/book-retail-thumb.jpg" alt="Book Retail SaaS Case Study" loading="lazy">
                             </div>
                             <div class="case-info">
                                 <span class="case-market">Book Retail (Netherlands)</span>
@@ -284,16 +310,16 @@
                         </a>
                         <a href="case-study-portugal-tech-hub.html" class="case-card">
                             <div class="case-thumb">
-                                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80" alt="Technology hub team collaboration case study" loading="lazy">
+                                <img src="img/tech-hub-thumb.jpg" alt="Technology hub team collaboration case study" loading="lazy">
                             </div>
                             <div class="case-info">
-                                <span class="case-market">Technology Hub Expansion (Portugal)</span>
-                                <h3>Launching a Remote-First Engineering Hub in Portugal</h3>
+                                <span class="case-market">Technology Hub Expansion</span>
+                                <h3>Launching an Engineering Hub in Portugal</h3>
                             </div>
                         </a>
                         <a href="case-study-engineering-department-scaling.html" class="case-card">
                             <div class="case-thumb">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Engineering department scaling case study" loading="lazy">
+                                <img src="img/eng-dept-thumb.jpg" alt="Engineering department scaling case study" loading="lazy">
                             </div>
                             <div class="case-info">
                                 <span class="case-market">Engineering Organization Transformation</span>
@@ -302,7 +328,7 @@
                         </a>
                         <a href="case-study-career-path-performance-feedback.html" class="case-card">
                             <div class="case-thumb">
-                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" alt="Career path and performance feedback case study" loading="lazy">
+                                <img src="img/career-path-thumb.jpg" alt="Career path and performance feedback case study" loading="lazy">
                             </div>
                             <div class="case-info">
                                 <span class="case-market">Career Path, Performance & Feedback</span>
@@ -332,69 +358,12 @@
                         </div>
                     </div>
                 </section>
-                <!-- Testimonials Section 
-                <section id="testimonials" class="section testimonials">
-                    <div class="testimonials-controls" aria-label="Testimonials navigation">
-                        <button class="testimonial-nav-btn" type="button" data-testimonial-nav="prev" aria-label="Previous testimonial" disabled>←</button>
-                        <div class="testimonials-dots" data-testimonial-dots role="tablist" aria-label="Testimonial slides"></div>
-                        <button class="testimonial-nav-btn" type="button" data-testimonial-nav="next" aria-label="Next testimonial">→</button>
-                    </div>
-                    <div class="testimonials-track">
-                        <div class="testimonials-slider" data-testimonials-slider>
-
-                            <blockquote class="testimonial-card">
-                                <p>"Diogo has a unique combination of local market knowledge and operational discipline that made all the difference. He navigated talent acquisition, shaped the engineering culture from scratch, and helped us build a hub that could truly operate independently. We achieved success in months."</p>
-                                <div class="testimonial-footer">
-                                    <cite>Co-founder &amp; Managing Director</cite>
-                                </div>
-                            </blockquote>
-
-                            <blockquote class="testimonial-card">
-                                <p>"Working alongside Diogo gave me a completely different perspective on engineering operations. His approach to frameworks for delivery governance and team performance were practical and applicable. He doesn't just advise, he works with the team until things are actually working."</p>
-                                <div class="testimonial-footer">
-                                    <cite>Engineering Excellence Manager</cite>
-                                </div>
-                            </blockquote>
-
-                            <blockquote class="testimonial-card">
-                                <p>"We worked with Diogo during a critical phase of our digital channels transformation. His ability to understand business goals and adapt the technology roadmap — and then hold the engineering organization accountable to it — was exactly what we needed."</p>
-                                <div class="testimonial-footer">
-                                    <cite>Digital Channels Director (Retail)</cite>
-                                </div>
-                            </blockquote>
-
-                            <blockquote class="testimonial-card">
-                                <p>"The team was not delivering at the level we needed, and Diogo was always able to connect with my challenges and ensure that the team changed to the appropriate profiles. Most would either oversimplify the problem or become defensive. Diogo found the right balance respecting our constraints while pushing forward with meaningful change. His stakeholder management across technical and business was genuinely exceptional."</p>
-                                <div class="testimonial-footer">
-                                    <cite>Digital Channels Director (Banking)</cite>
-                                </div>
-                            </blockquote>
-
-                            <blockquote class="testimonial-card">
-                                <p>"Diogo has a rare ability to bring clarity to chaotic situations. When our engineering delivery was struggling, he quickly diagnosed the root causes and worked with the team to fix them. His observations were honest, direct, and every output was actionable."</p>
-                                <div class="testimonial-footer">
-                                    <cite>Senior Project Manager</cite>
-                                </div>
-                            </blockquote>
-
-                            <blockquote class="testimonial-card">
-                                <p>"The mentorship sessions with Diogo changed how I approach leadership. He challenged my assumptions, gave me concrete tools for managing my team, and helped me navigate some genuinely difficult conversations with stakeholders. I left every conversation with a clear, realistic action plan."</p>
-                                <div class="testimonial-footer">
-                                    <cite>Head of Mobile</cite>
-                                </div>
-                            </blockquote>
-
-                        </div>
-                    </div>
-                    <p class="testimonials-note">All testimonials are purposefully anonymous. Contacts available upon request.</p>
-                </section>
--->
                 <section id="about" class="section about">
                     <h2>About</h2>
                     <div class="about-layout">
                         <div class="about-main">
                             <div class="profile-pic-container">
-                                <img src="ProfilePic.jpg" alt="Profile picture of Diogo G. Cunha" class="profile-pic">
+                                <img src="img/ProfilePic.jpg" alt="Profile picture of Diogo G. Cunha" class="profile-pic">
                             </div>
                             <p>
                                 I am Diogo, a Software Engineering executive and technology lover based in Lisbon, helping organizations turn information engineering into measurable business outcomes.
@@ -408,7 +377,7 @@
                                 <h3>Professional Highlights</h3>
                                 <ul>
                                     <li>6 years as Head of Engineering & CTO leading multi-service organizations</li>
-                                    <li>Built and managed a development hub in Portugal as CEO & co-founder</li>
+                                    <li>Built and managed a development hub in Portugal as CEO & co-founder for 5 years</li>
                                     <li>Hands-on background in software architecture, security, web, mobile, and cloud</li>
                                     <li>Experience with ISO 12207, ISO 27001, Agile practices, and OKRs</li>
                                     <li>MSc and BSc in Information Systems and Computer Engineering (Instituto Superior Técnico)</li>
