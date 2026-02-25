@@ -77,9 +77,35 @@
         }
     }
 
+    function initializeAnalyticsTracking() {
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('a, button');
+            if (!target) return;
+
+            const isButton = target.tagName === 'BUTTON' || target.classList.contains('btn');
+            
+            if (isButton && typeof gtag === 'function') {
+                const buttonText = target.textContent.trim() || target.getAttribute('aria-label') || 'Unknown Button';
+                const buttonUrl = target.getAttribute('href') || '';
+                const buttonClasses = Array.from(target.classList).join(' ');
+                
+                gtag('event', 'button_click', {
+                    'event_category': 'engagement',
+                    'event_label': buttonText,
+                    'button_url': buttonUrl,
+                    'button_classes': buttonClasses
+                });
+            }
+        });
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeThemeToggle);
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeThemeToggle();
+            initializeAnalyticsTracking();
+        });
     } else {
         initializeThemeToggle();
+        initializeAnalyticsTracking();
     }
 })();
