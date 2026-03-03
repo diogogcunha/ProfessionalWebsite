@@ -169,66 +169,24 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCaseStudyControls();
     }
 
-    // Testimonials slider
-    const testimonialsSlider = document.querySelector('[data-testimonials-slider]');
-    const testimonialPrev = document.querySelector('[data-testimonial-nav="prev"]');
-    const testimonialNext = document.querySelector('[data-testimonial-nav="next"]');
-    const testimonialDotsContainer = document.querySelector('[data-testimonial-dots]');
+    // Analytics: track button and CTA clicks
+    document.addEventListener('click', function (e) {
+        const target = e.target.closest('a, button');
+        if (!target) return;
 
-    if (testimonialsSlider && testimonialPrev && testimonialNext && testimonialDotsContainer) {
-        const testimonialCards = Array.from(testimonialsSlider.querySelectorAll('.testimonial-card'));
-        let currentTestimonial = 0;
+        const isButton = target.tagName === 'BUTTON' || target.classList.contains('btn');
 
-        testimonialCards.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.type = 'button';
-            dot.className = 'testimonial-dot' + (index === 0 ? ' active' : '');
-            dot.setAttribute('role', 'tab');
-            dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-            dot.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-            dot.setAttribute('tabindex', index === 0 ? '0' : '-1');
-            dot.dataset.testimonialIndex = index;
-            testimonialDotsContainer.appendChild(dot);
-        });
+        if (isButton && typeof gtag === 'function') {
+            const buttonText = target.textContent.trim() || target.getAttribute('aria-label') || 'Unknown Button';
+            const buttonUrl = target.getAttribute('href') || '';
+            const buttonClasses = Array.from(target.classList).join(' ');
 
-        const testimonialDots = Array.from(testimonialDotsContainer.querySelectorAll('.testimonial-dot'));
-
-        const goToTestimonial = (index) => {
-            currentTestimonial = Math.max(0, Math.min(index, testimonialCards.length - 1));
-            testimonialsSlider.style.transform = `translateX(-${currentTestimonial * 100}%)`;
-
-            testimonialPrev.disabled = currentTestimonial === 0;
-            testimonialNext.disabled = currentTestimonial === testimonialCards.length - 1;
-
-            testimonialDots.forEach((dot, i) => {
-                const isActive = i === currentTestimonial;
-                dot.classList.toggle('active', isActive);
-                dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
-                dot.setAttribute('tabindex', isActive ? '0' : '-1');
+            gtag('event', 'button_click', {
+                'event_category': 'engagement',
+                'event_label': buttonText,
+                'button_url': buttonUrl,
+                'button_classes': buttonClasses
             });
-        };
-
-        testimonialPrev.addEventListener('click', () => goToTestimonial(currentTestimonial - 1));
-        testimonialNext.addEventListener('click', () => goToTestimonial(currentTestimonial + 1));
-
-        testimonialDots.forEach((dot) => {
-            dot.addEventListener('click', () => goToTestimonial(Number.parseInt(dot.dataset.testimonialIndex || '0', 10)));
-        });
-
-        // Keyboard navigation on the slider track
-        testimonialsSlider.closest('.testimonials-track').addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowRight') { event.preventDefault(); goToTestimonial(currentTestimonial + 1); }
-            if (event.key === 'ArrowLeft') { event.preventDefault(); goToTestimonial(currentTestimonial - 1); }
-        });
-
-        // Touch/swipe support
-        let touchStartX = 0;
-        testimonialsSlider.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        testimonialsSlider.addEventListener('touchend', (e) => {
-            const delta = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(delta) > 40) goToTestimonial(currentTestimonial + (delta > 0 ? 1 : -1));
-        }, { passive: true });
-
-        goToTestimonial(0);
-    }
+        }
+    });
 });
